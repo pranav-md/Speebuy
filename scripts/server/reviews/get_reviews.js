@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
-var {Create_review} = require('./reviews/reviews_schema');
+var {Get_review} = require('./reviews/reviews_schema');
  
 
 var getreview_fun =function(req,res) {
 
-    Create_review.find({
+    Get_review.find({
         shop_id:  req.body.shop_id
     }).then((review_found) =>{
         if(!review_found)

@@ -5,7 +5,7 @@ var Schema_reviews=mongoose.model('REVIEWS',{
         type: String  
         },
     user_id:{
-        type: String,
+        type: String
         },
     shop_id:{
         type: String
