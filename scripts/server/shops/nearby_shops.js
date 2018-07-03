@@ -19,7 +19,10 @@ var shops_nearby =function(req,res) {
                                 shop_radius:shop.delivery_radius};
           }
         });
-        res.send(userMap);  
+        if(count!=0)
+            res.status(302).send(nearShops);
+        else
+            res.status(404).send("no shops nearby");  
       });    
 };
 function distance(lat1,lon1,lat2,lon2) {
