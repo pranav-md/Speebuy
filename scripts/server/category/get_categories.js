@@ -4,7 +4,6 @@ var {Get_category} = require('./category/categories_schema');
  
 
 var getcategory_fun =function(req,res) {
-
     Get_shops.find({ 
         shop_id:  req.body.shop_id
     }).then((shop_found) =>{
