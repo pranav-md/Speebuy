@@ -7,7 +7,6 @@ var {Create_review} = require('./reviews/reviews_schema');
             user_id: req.body.user_id,
             shop_id: req.body.shop_id,
             rating: req.body.rating,
-            rating: req.body.review_rating,
             review_content: req.body.password,
             timestamp:new Date()
         });
@@ -15,7 +14,7 @@ var {Create_review} = require('./reviews/reviews_schema');
             res.status(201).send(doc);
         },
         (e)=>{
-            res.status(401).send(e);
+            res.status(413).send(e);
         }); 
 	};
 module.exports = newacc_fun;

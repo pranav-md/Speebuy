@@ -35,14 +35,6 @@ var login_user =function(req,res) {
             }
             console.log('Account found is:',acc_found);
         }); 
-
     }
-
-   /* newuser.save().then((doc)=>{
-        res.status(201).send(doc);
-    },
-    (e)=>{
-        res.status(401).send(e);
-    }); */
 };
 module.exports = login_user;
